@@ -55,4 +55,4 @@ def predict_datapoint():
     return render_template('index.html', results=results, accuracy=accuracy, mean_accuracy=mean_accuracy, recall=recall)
 
 if __name__ == '__main__':
-    app.run(port=3000, debug=True)
+    app.run(debug=True)

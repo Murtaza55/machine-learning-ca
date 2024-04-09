@@ -1,6 +1,6 @@
-pandas==1.0.3
-Flask==1.1.1
+pandas
+Flask
 numpy
-scikit_learn==0.22.1
-gunicorn==20.0.4
+scikit_learn
+gunicorn
 -e .

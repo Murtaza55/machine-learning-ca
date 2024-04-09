@@ -1,5 +1,8 @@
 from flask import Flask, request, render_template
 import numpy as np
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.metrics import accuracy_score, recall_score
+
 import pickle
 
 model = pickle.load(open('logistic_reg_model.pkl', 'rb'))
@@ -16,8 +19,9 @@ def predict_datapoint():
     glucose = float(request.form.get('glucose'))
     bmi = float(request.form.get('bmi'))
     age = float(request.form.get('age'))
+    dpf = float(request.form.get('dpf'))
     
-    data = np.array([[glucose, bmi, age]])
+    data = np.array([[glucose, bmi, age, dpf]])
     data = data.astype(float)
 
     # print("================DATA===================", data)

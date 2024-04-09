@@ -92,7 +92,7 @@ I-1
 I0
 tp38
 bI00
-S'\x0e\x00\x00\x00'
+S'\x0f\x00\x00\x00'
 p39
 tp40
 bsS'intercept_scaling'
@@ -128,7 +128,7 @@ tp52
 Rp53
 (I1
 (I1
-I3
+I4
 tp54
 g21
 (S'f8'
@@ -145,7 +145,7 @@ I-1
 I0
 tp59
 bI00
-S'\xc9\xc5<R&Q\x99?\xbd\x8dD\xa1\x04F\x96?7kH\xc8\x0el\xa1?'
+S'\xb1\x95P=\x0be\x99?\x08\xc3f\xc0\x7f\xb2\x92?\x8f\x0f\xe9\x8db\x92\xa1?e+\xa6\xb2Y\xd9\xe3?'
 p60
 tp61
 bsS'intercept_'
@@ -162,7 +162,7 @@ Rp65
 tp66
 g57
 I00
-S'\x01!_"6u\x16\xc0'
+S'\xff5\xc0G\x8b$\x17\xc0'
 p67
 tp68
 bsS'max_iter'

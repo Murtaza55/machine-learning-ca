@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
-    <!-- <a href="https://github.com/murtaza55/mlproject_regression" class="top-left-link" target="_blank">GitHub Repository Link</a> -->
+    <!-- <a href="https://github.com/murtaza55/machine-learning-ca" class="top-left-link" target="_blank">GitHub Repository Link</a> -->
     <h1>Diabetes Patient Prediction- ML CA 01</h1>
     <div class="form-box">
     <form action="{{url_for('predict_datapoint')}}" method="POST">
@@ -23,6 +23,27 @@
             <label for="age">Age:</label>
             <input type="text" id="age" name="age" placeholder="Enter Patient's age (float)">
         </div>
+
+        <div class="form-group" style="padding-top: 20px;">  
+          <label for="dpf">Diabetic Pedigree Function:</label>
+          <input name="dpf" class="slider" type="range" min="0" max="2.4" step="0.01" value="0.47" oninput="updateSliderValue(this)">
+          <p id="rangeValue">0.47</p>
+        </div>
+
+        <script>
+          function updateSliderValue(slider) {
+            const floatValue = parseFloat(slider.value).toFixed(2); // Convert slider value to float with two decimal places
+            document.getElementById('rangeValue').innerText = floatValue;
+            console.log('dpf selected value:', floatValue)
+          }
+      
+          // Initialize the slider value on page load
+          window.onload = function() {
+            const initialValue = document.querySelector('.slider').value;
+            updateSliderValue(document.querySelector('.slider'));
+            console.log('dpf actual value:', initialValue)
+          };
+        </script>
     
     <div style="clear:both;"></div>
       <input type="submit" value="Submit">
@@ -30,8 +51,8 @@
     </div>
     <div>      
     <h2>
-      Predicted Diabetic Result: {% if results == 0.0 %} False {% elif results == 1.0 %} True {% endif %}
+      Predicted Diabetic Result: {% if results == 0.0 %} <p style="color: #00CC66;">The Patient is not Diabetic</p> {% elif results == 1.0 %} <p style="color: #990000;">The Patient is diabetic</p> {% endif %}
     </h2>
-  
+    
   </body>
 </html>

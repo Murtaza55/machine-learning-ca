@@ -28,10 +28,10 @@ body {
   .form-box {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #FFFFE0;
+    background-color: #E1E5F8;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
   }
   
   h1 {
@@ -83,3 +83,21 @@ body {
   .form-group label {
     margin-bottom: 5px;
   }
+
+  .slider {
+    appearance: none; /* removes browser-specific styling */
+    width: 205px; /* width of slider */
+    height: 25px; /* height of slider */
+    background: #FF5C35 ; /* orange background */
+    outline: none; /* remove outline */
+    border-radius: 50px; /* round corners */
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none; /* removes browser-specific styling */
+  width: 20px; /* handle width */
+  height: 20px; /* handle height */
+  border-radius: 50%; /* make it circular */
+  background: #FFFFFF; /* white color */
+  cursor: pointer; /* cursor on hover */
+}

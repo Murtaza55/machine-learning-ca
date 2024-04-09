@@ -28,7 +28,7 @@ outliers = ((df.drop('Outcome', axis=1) < lower_bounds) | (df.drop('Outcome', ax
 df = df[~outliers]
 
 # Split the data into features (X) and target variable (y)
-X = df[['Glucose', 'BMI', 'Age']]
+X = df[['Glucose', 'BMI', 'Age', 'DiabetesPedigreeFunction']]
 y = df['Outcome']
 
 print(X.shape)

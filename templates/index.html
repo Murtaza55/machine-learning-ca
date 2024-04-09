@@ -52,6 +52,9 @@
     <div>      
     <h2>
       Predicted Diabetic Result: {% if results == 0.0 %} <p style="color: #00CC66;">The Patient is not Diabetic</p> {% elif results == 1.0 %} <p style="color: #990000;">The Patient is diabetic</p> {% endif %}
+      <p>Accuracy: {{ accuracy }}%</p>
+      <p>Mean Accuracy: {{ mean_accuracy }}%</p>
+      <p>Mean Recall: {{ recall }}%</p>
     </h2>
     
   </body>

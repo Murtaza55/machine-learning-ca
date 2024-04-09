@@ -35,6 +35,10 @@ print(X.shape)
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+# Save the testing data to files
+np.save('X_test.npy', X_test)
+np.save('y_test.npy', y_test)
+
 # Initialize and train the logistic regression model with increased max_iter
 model = LogisticRegression(max_iter=1000)  # Increase max_iter value
 model.fit(X_train, y_train)
